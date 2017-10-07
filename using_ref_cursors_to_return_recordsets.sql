@@ -7,9 +7,9 @@ DECLARE
   l_last_name   hr.employees.last_name%type;
   l_email       hr.employees.email%type;
 
-PROCEDURE get_cursor(p_first_value IN NUMBER
-                    ,p__last_value IN NUMBER
-                    ,p_result OUT SYS_REFCURSOR) AS
+PROCEDURE get_cursor(p_first_value  IN NUMBER
+                    ,p__last_value  IN NUMBER
+                    ,p_result       OUT SYS_REFCURSOR) AS
 BEGIN
 
   OPEN p_result FOR
