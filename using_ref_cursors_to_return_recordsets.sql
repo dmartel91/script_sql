@@ -8,7 +8,7 @@ DECLARE
   l_email       hr.employees.email%type;
 
 PROCEDURE get_cursor(p_first_value  IN NUMBER
-                    ,p__last_value  IN NUMBER
+                    ,p_last_value  IN NUMBER
                     ,p_result       OUT SYS_REFCURSOR) AS
 BEGIN
 
@@ -19,7 +19,7 @@ BEGIN
         ,e.email
     FROM employees e
    WHERE 1 = 1
-     AND e.employee_id BETWEEN p_first_value AND p__last_value;
+     AND e.employee_id BETWEEN p_first_value AND p_last_value;
 
 END get_cursor;
 
